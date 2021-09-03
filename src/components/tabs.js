@@ -1,4 +1,5 @@
 import axios from 'axios'
+
 const Tabs = (topics) => {
   // TASK 3
   // ---------------------
@@ -39,16 +40,14 @@ const tabsAppender = (selector) => {
     try {
       const getTopics = await axios.get('http://localhost:5000/api/topics');
       console.log(getTopics);
-      const listOfTopics = getTopics.data;
-      const newTopics = Tabs(listOfTopics);
+      const listOfTopics = getTopics.data.topics;
+      const allTopics = Tabs(listOfTopics);
       const parentTopics = document.querySelector(`${selector}`);
-      parentTopics.appendChild(newTopics);
+      parentTopics.appendChild(allTopics);
     } catch(err) {
-      console.log('Error getting data');
+      console.log(err);
     }
   })();
-
-
 }
 
 export { Tabs, tabsAppender }
