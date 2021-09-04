@@ -11,7 +11,7 @@ const Header = (title, date, temp) => {
   //    <span class="temp">{ temp }</span>
   //  </div>
   //
-
+  console.log(title, date, temp);
   const newsHeader = document.createElement('div');
   const newsDate = document.createElement('span');
   const newsTitle = document.createElement('h1');
@@ -40,7 +40,7 @@ const headerAppender = (selector) => {
   // It should append the header to the element in the DOM that matches the given selector.
   //
   const parent = document.querySelector(`${selector}`);
-  const addArticle = Header();
+  const addArticle = Header("Lambda School", "September 3rd, 2021", "74°");
   parent.appendChild(addArticle);
 
 }

@@ -39,7 +39,6 @@ const tabsAppender = (selector) => {
   (async () => {
     try {
       const getTopics = await axios.get('http://localhost:5000/api/topics');
-      console.log(getTopics);
       const listOfTopics = getTopics.data.topics;
       const allTopics = Tabs(listOfTopics);
       const parentTopics = document.querySelector(`${selector}`);
