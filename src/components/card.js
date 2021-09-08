@@ -20,6 +20,9 @@ const Card = ( {headline, authorPhoto, authorName} ) => {
   // </div>
   //
 
+
+
+  
   const artCard = document.createElement('div');
   const artHeadline = document.createElement('div');
   const artAuthor = document.createElement('div');

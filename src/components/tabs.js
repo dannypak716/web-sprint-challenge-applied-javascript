@@ -28,6 +28,8 @@ const Tabs = (topics) => {
   return allTopics;
 }
 
+
+
 const tabsAppender = (selector) => {
   // TASK 4
   // ---------------------
